@@ -35,7 +35,7 @@ function HomeContact() {
 
   return (
     <section style={{ paddingBottom: "40px" }}>
-      <main style={{ paddingBottom: "40px" }}>
+      <main>
         <HighlightText text={t("contact.title")} />
 
         <aside className="contact-infos-container">
