@@ -1,0 +1,47 @@
+$dark-theme: (
+    color_1: #31313a,
+    color_2: #ff9800,
+    color_3: rgba(197,202,213,.15),
+    color_4: #666,
+    color_text: rgba(255, 255, 255, 0.55),
+    color_title: rgba(255,255,255,.9),
+    color_msg: rgba(255, 255, 255, 0.85),
+    background-drop: linear-gradient( to bottom right, #17171b 0, #28282f 100% ),
+    background-color: #26262d,
+    background-color_1: #222,
+    background-color_2: #31313a,
+    border-vertical_1: radial-gradient(
+        ellipse at top,
+        rgba(197,202,213,.15) 0%,
+        rgba(255, 255, 255, 0) 70%
+    ),
+    border-horizontal_1: radial-gradient(
+        ellipse at left,
+        rgba(197,202,213,.15) 0%,
+        rgba(255, 255, 255, 0) 70%
+    )
+);
+
+$light-theme: (
+    color_1: #e0e0e0,
+    color_2: #ff9800,
+    color_3: rgba(0, 0, 0, .08),
+    color_4: #444,
+    color_text: rgba(0, 0, 0, 0.65),
+    color_title: #323232,
+    color_msg: #646464,
+    background-drop: #f6f6f6,
+    background-color: #fff,
+    background-color_1: #222,
+    background-color_2: #fff,
+    border-vertical_1: radial-gradient(
+        ellipse at top,
+        #ddd 0%,
+        rgba(255, 255, 255, 0) 70%
+    ),
+    border-horizontal_1: radial-gradient(
+        ellipse at left,
+        #ddd 0%,
+        rgba(255, 255, 255, 0) 70%
+    )
+);

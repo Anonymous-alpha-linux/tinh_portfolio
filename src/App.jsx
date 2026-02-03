@@ -1,13 +1,16 @@
-import './App.css';
-import Home from './home';
+import "./App.css";
+import AppContext from "./context/AppContext";
+import ToolBarContext from "./context/ToolBarContext";
+import Home from "./home";
 
 function App() {
-
   return (
-    <>
-      <Home></Home>
-    </>
-  )
+    <AppContext>
+      <ToolBarContext>
+        <Home />
+      </ToolBarContext>
+    </AppContext>
+  );
 }
 
-export default App
+export default App;

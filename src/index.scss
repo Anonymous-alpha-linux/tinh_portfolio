@@ -1,0 +1,133 @@
+@use "variables" as *;
+@import "theme";
+@import "font";
+@import "mixins";
+@import "screen";
+
+@-webkit-keyframes customfadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes customfadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes customfadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+}
+@keyframes customfadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+}
+:root {
+  @include export-variables($font_EN);
+  @include export-variables($dark-theme);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[data-theme="light"] {
+  @include export-variables($light-theme);
+}
+[data-lang="vi"] {
+  @include export-variables($font_VI);
+}
+
+html {
+}
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color);
+
+  .fadeInLeft {
+    -webkit-animation-name: customfadeInLeft;
+    animation-name: customfadeInLeft;
+  }
+  .fadeOutLeft {
+    -webkit-animation-name: customfadeOutLeft;
+    animation-name: customfadeOutLeft;
+  }
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: var(--font-family_2);
+  background-color: var(--background-color_2);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  &:hover {
+  }
+  &:focus {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+p {
+  white-space: pre-line;
+}
+strong {
+  font-weight: 600;
+}
+img {
+  user-select: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  @media (max-width: $mobile) {
+    appearance: none;
+    display: none;
+  }
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  background-color: transparent;
+}

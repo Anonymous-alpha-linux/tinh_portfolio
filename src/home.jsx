@@ -1,97 +1,173 @@
-import React from 'react'
-import './home.css';
-import FbIcon from './assets/facebook-brands-solid-full.svg';
-import GitIcon from './assets/github-brands-solid-full.svg';
-import LinkedInIcon from './assets/linkedin-brands-solid-full.svg';
+import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import "./home.scss";
+
+import HomeAbout from "./sections/home-about";
+import HomeProject from "./sections/home-project";
+import HomeSkill from "./sections/home-skill";
+import HomeContact from "./sections/home-contact";
+
+import { FaPaperPlane, FaCloudDownloadAlt } from "react-icons/fa";
+
+import TypeWriter from "./components/typeWriter";
+import ToolBar from "./components/toolBar";
+import LaserBackground from "./components/lazerBg";
+import { useAppContext } from "./context/useAppContext";
+import { AVATAR_LINK, MENU_LIST, SOCIAL_LINKS } from "./const";
+import { downloadCV } from "./helpers";
+import clsx from "clsx";
 
 function Home() {
+  const { t, i18n } = useTranslation();
+
+  const { activePage, changeActivePage } = useAppContext();
+
+  const onClickToActivePage = useCallback(
+    (pageKey) => {
+      changeActivePage(pageKey);
+    },
+    [changeActivePage]
+  );
+
   return (
-    <div className='page'>
-
+    <div className="page" data-lang={i18n.language}>
       <div className="background gradient">
-        <ul className='bg-bubbles'>
-          {Array.from(Array(10)).map(() => <li></li>)}
-        </ul>
+        <LaserBackground />
       </div>
-      <div className='layout-root'>
-        <header class="layout-header flex flex-col">
-           <a href="#about" class="menu-btn text-xs mb-[8px]">
-            <span className='hamburger'></span>
-           </a>
-          <nav class="hidden md:flex space-x-6 flex-col menu-nav">
-            <a href="#about" class="menu-btn text-xs">About</a>
-            <a href="#projects" class="menu-btn text-xs">Projects</a>
-            <a href="#skills" class="menu-btn text-xs">Skills</a>
-            <a href="#contact" class="menu-btn text-xs">Contact</a>
-          </nav>
-        </header> 
-        <div className="layout-left">
-          <aside id="hero"> 
-              <div className='profile-cover-image'>
-                <img src="https://bslthemes.com/html/ryan/images/bg.jpg" alt='bg' loading='lazy'></img>
-              </div>
-            <div className="profile">
-              <div className="profile-info">
 
-              <div className='profile-avatar'>
-                <img src="https://bslthemes.com/html/ryan/images/profile.png" alt='profile_bg' loading='lazy'></img>
+      <div className="layout-root">
+        {/* HEADER */}
+        <header className="layout-header">
+          <div className="layout-header-inner">
+            <div className="mobile-header">
+              <div className="mobile-brand">
+                <div className="mobile-brand-logo">
+                  <img src={AVATAR_LINK} alt="logo" loading="lazy" />
+                </div>
+                <div className="mobile-brand-text">
+                  {t("home.hero.name")}
+                  <TypeWriter className={"mobile-brand-typewriter"} />
+                </div>
               </div>
-              <h1 className='text-center text-[34px]'>Nguyen Trung Tinh</h1>
-              <h2 className='text-center text-base'>A Fullstack developer</h2>
-              <div className='flex justify-center'>
-                <img className='profile-icon' src={FbIcon} alt='facebook link'></img>
-                <img className='profile-icon' src={GitIcon} alt='git link'></img>
-                <img className='profile-icon' src={LinkedInIcon} alt='linked-in link'></img>
-                {/* <FbIcon></FbIcon>
-                <GitIcon></GitIcon>
-                <LinkedInIcon></LinkedInIcon> */}
-              </div>
-              </div>
+              <ToolBar />
             </div>
-            <div className='profile-footer flex justify-center'>
-              <div className="profile-btn">
-                DOWNLOAD CV
+            <nav className={clsx("md:flex flex-col menu-nav rounded-sm")}>
+              <ul>
+                {MENU_LIST.map((item, index) => (
+                  <li
+                    key={item.key}
+                    className={clsx(
+                      "menu-nav-item",
+                      index === MENU_LIST.length - 1 && "none-border"
+                    )}
+                  >
+                    <a
+                      className="menu-btn-item flex-col uppercase"
+                      onClick={() => onClickToActivePage(item.key)}
+                    >
+                      <span className="menu-btn-icon text-[20px]">
+                        {item.icon}
+                      </span>
+                      <span>{t(`home.menu.${item.key}`)}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        {/* LEFT */}
+        <div className="layout-left">
+          <aside id="hero">
+            <main className="hero-profile-bg">
+              <div className="profile-cover-image">
+                <img
+                  src="https://bslthemes.com/html/ryan/images/bg.jpg"
+                  alt="bg"
+                  loading="lazy"
+                />
               </div>
-              <div className='profile-btn-gap'></div>
-              <div className="profile-btn">
-                CONTACT ME
+
+              <div className="profile">
+                <div className="profile-info">
+                  <div className="profile-avatar">
+                    <div className="profile-avatar-img">
+                      <img src={AVATAR_LINK} alt="profile" loading="lazy" />
+                    </div>
+                  </div>
+
+                  <h1 className="text-center text-[34px] font-semibold">
+                    {t("home.hero.name")}
+                  </h1>
+
+                  <h2 className="text-center text-base mb-3">
+                    <TypeWriter />
+                  </h2>
+
+                  <div className="flex justify-center gap-3">
+                    {SOCIAL_LINKS.map(({ key, icon }) => (
+                      <span
+                        key={key}
+                        className="profile-icon"
+                        title={t(`home.social.${key}`)}
+                      >
+                        {icon}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+
+              <div className="profile-footer flex justify-center">
+                <div className="profile-btn" onClick={() => downloadCV()}>
+                  <span className="profile-btn-context">
+                    {t("home.hero.buttons.downloadCv")}
+                    <span className="profile-btn-context-icon text-[16px]">
+                      <FaCloudDownloadAlt />
+                    </span>
+                  </span>
+                </div>
+
+                <div className="profile-btn-gap" />
+
+                <div
+                  className="profile-btn"
+                  onClick={() => changeActivePage("contact")}
+                >
+                  <span className="profile-btn-context">
+                    {t("home.hero.buttons.contactMe")}
+                    <span className="profile-btn-context-icon">
+                      <FaPaperPlane />
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </main>
           </aside>
         </div>
-        <div className='layout-right'>
-          <main id='main'>
-            <section id="about">
-              <h2>About me</h2>
 
-              <div>
-
+        {/* RIGHT */}
+        <div className="layout-right">
+          <div className="layout-align-center">
+            {MENU_LIST.map(({ key }) => (
+              <div
+                key={key}
+                className={`card-inner animated ${
+                  activePage === key ? "fadeInLeft" : "fadeOutLeft hidden"
+                }`}
+              >
+                {key === "about" && <HomeAbout />}
+                {key === "projects" && <HomeProject />}
+                {key === "skills" && <HomeSkill />}
+                {key === "contact" && <HomeContact />}
               </div>
-            </section>
-
-            <section id="skills">
-              <h2>Skills</h2>
-            </section>
-
-            <section id="projects">
-              {/* Dùng "article" cho từng bài viết/dự án riêng */}
-              <h2>Projects</h2>
-            </section>
-
-            <section id="testimonials"></section>
-
-            <section id="contact">
-              <h2>Contact</h2>
-            </section>
-          </main>
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* <footer id='footer'>
-        <h2>Info</h2>
-      </footer> */}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

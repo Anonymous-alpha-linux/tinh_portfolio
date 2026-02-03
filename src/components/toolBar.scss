@@ -1,0 +1,31 @@
+@use '../screen' as *;
+
+.theme-icon {
+    position: relative;
+    margin-bottom: 15px;
+    @media (max-width: $mobile) {
+        margin-bottom: 0;
+        width: 50px;
+    }
+}
+
+.theme-text-span {
+    position: absolute;
+    user-select: none;
+    bottom: -10px;
+    right: 20px;
+    font-size: 10px;
+    padding: 0 2px;
+    color: var(--color_title);
+    font-weight: 600;
+    background-color: var(--background-color_2);
+    transform: translate(calc(-50% + 5px), calc(-50% + 9px));
+    left: 50%;
+    top: 50%;
+    width: auto;
+    max-width: 20px;
+    height: 15px;
+    @media (max-width: $mobile) {
+        right: 0;
+    }
+}

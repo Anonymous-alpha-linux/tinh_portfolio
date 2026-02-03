@@ -1,0 +1,228 @@
+@import '../screen';
+
+.resume {
+    &-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: $mobile) {
+            display: block;
+        }
+        &::after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background: var(--border-vertical_1);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            @media (max-width: $mobile) {
+                content: unset;
+            }
+        }
+    }
+    
+    &-exp, &-edu {
+        &-header {
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            &::after {
+                content: '';
+                height: 1px;
+                width: 100%;
+                background: var(--border-horizontal_1);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+		    }
+        }
+        &-box {
+            padding: 20px 0;
+        }
+        &-icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border: 1px solid var(--color_2);
+            color: var(--color_2);
+            border-radius: 30px;
+            padding: 12px;
+        }
+        &-title {			
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        &-tree {
+            position: relative;
+            &::before {
+                content: '';
+                height: 100%;
+                width: 1px;
+                position: absolute;
+                left: 20px;
+                top: 30px;
+                background: var(--color_3);
+            }
+        }
+
+        &-node {
+            padding: 0 20px;
+            position: relative;
+            padding: 20px 20px;
+            margin-left: 15px;
+            &::before {
+                content: '';
+                width: 9px;
+                height: 9px;
+                background: var(--color_4);
+                border-radius: 50%;
+                position: absolute;
+                left: 1px;
+                top: 27px;
+            }
+            &::after {
+                content: '';
+                width: calc(100% - 15px);
+                height: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 6px;
+                background: var(--border-horizontal_1);
+            }
+            &:nth-last-child(-n + 1)::after {
+                content: unset;
+            }
+            &-duration {
+                font-size: 12px;
+                border: 2px solid var(--color_text);
+                border-radius: 4px;
+                padding: 0 5px;
+                margin-bottom: 20px;
+            }
+            &-company {
+                color: var(--color_text);
+                padding: 10px 0;
+            }
+            &-role {
+                color: var(--color_title);
+                font-weight: 600;
+                padding: 10px 0;
+            }
+            &-desc {
+                color: var(--color_text)  ;
+            }
+            &.active {
+                &::before {
+                    background: var(--color_2);
+                }
+                .resume-exp, .resume-edu {
+                    &-node {
+                        &-duration {
+                            border-color: var(--color_2);
+                            color: var(--color_2);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.skill {
+    &-knowledge {
+        &-lst {
+            padding: 20px;
+        }
+        &-item {
+            display: flex;
+            align-items: start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+    }
+    &-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: $mobile) {
+            display: block;
+        }
+        &::after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background: var(--border-vertical_1);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            @media (max-width: $mobile) {
+                content: unset;
+            }
+        }
+    }
+    &-box {
+        padding: 20px 0;
+    }
+    &-header {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        &::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: var(--border-horizontal_1);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &-icon {
+        display: block;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 32px;
+        border: 1px solid var(--color_2);
+        color: var(--color_2);
+        border-radius: 30px;
+        padding: 12px;
+    }
+    &-title {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+    &-coding {
+        &-lst {
+            padding: 20px;
+            gap: 10px;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        &-icon {
+            color: var(--color_2);
+        }
+    }
+}

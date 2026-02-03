@@ -1,0 +1,167 @@
+{
+  "home": {
+    "menu": {
+      "about": "About",
+      "projects": "Projects",
+      "skills": "Skills",
+      "contact": "Contact"
+    },
+    "hero": {
+      "name": "Alan Nguyen",
+      "buttons": {
+        "downloadCv": "DOWNLOAD CV",
+        "contactMe": "CONTACT ME"
+      }
+    },
+    "social": {
+      "facebook": "Facebook",
+      "github": "Github",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "toolbar": {
+    "language": {
+      "vi-text": "Vietnamese",
+      "en-text": "English"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "hello": "Hello! I'm Nguyen Tinh.",
+    "description": "A website developer from Danang, Vietnam. I have rich experience in web coding and building on the platform of \"Amazon and Azure\", also I'm good at some other technology like ReactJS, Typescript, Dotnet. I love to talk with you about our unique",
+    "info": {
+      "age": {
+        "label": "Age",
+        "value": "25"
+      },
+      "residence": {
+        "label": "Residence",
+        "value": "VN"
+      },
+      "freelance": {
+        "label": "Freelance",
+        "value": "Available"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Danang, VN"
+      }
+    }
+  },
+  "services": {
+    "title": "My Services",
+    "frontend": {
+      "title": "Front-end",
+      "content": "Full responsive website include mobile or desktop that help you to reach all of your marketing."
+    },
+    "backend": {
+      "title": "Back-end",
+      "content": "Develope the simple database, build it to the platform at hosting"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "content": "UI/UX focus on the user, frontend focus on the settings of the user, and backend focus on the data."
+    },
+    "advertising": {
+      "title": "Advertising",
+      "content": "Help your product to customers with the best methods like SEO, social media campaigns, website app,..."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "all": "All",
+    "websites": "Website",
+    "campaigns": "Advertising Campaigns"
+  },
+  "resume": {
+    "title": "Resume",
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "duration": "2022 - Present",
+          "company": "Avepoint Technology Co., Ltd",
+          "role": "Team leader",
+          "description": "Collaborate with creative and development teams."
+        },
+        {
+          "duration": "2019 - 2020",
+          "company": "Catmedia Media and Technology Co., Ltd.",
+          "role": "Junior Developer",
+          "description": "Monitored technical aspects of the front-end delivery for projects."
+        },
+        {
+          "duration": "2018 - 2019",
+          "company": "FPT Company",
+          "role": "Developer Internship",
+          "description": "Monitored technical aspects of the front-end delivery for projects."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "duration": "2018-2022 (Graduated)",
+          "school": "Technology FPT Greenwich University",
+          "role": "Student of Software Engineer",
+          "description": "Collaborate with creative and development teams."
+        },
+        {
+          "duration": "2020-2026",
+          "school": "Certificated Security",
+          "role": "Student of Software Engineer",
+          "description": "Mark Study Online Course"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "coding": {
+      "title": "Coding",
+      "items": ["HTML/CSS", "Dotnet", "Javascript/Typescript", "ReactJS/VueJS"]
+    },
+    "knowledge": {
+      "title": "Knowledge",
+      "items": [
+        "Website Hosting",
+        "SEO Optimize",
+        "Responsive and mobile-ready",
+        "Advertising services"
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": ["Vietnamese", "English"]
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "info": {
+      "address": {
+        "label": "Address",
+        "value": "Danang, VN"
+      },
+      "email": {
+        "label": "Email",
+        "value": "tinhnt1006@gmail.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+84 398 866 140"
+      },
+      "freelance": {
+        "label": "Freelance",
+        "value": "Available"
+      }
+    },
+    "form": {
+      "title": "Contact form",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "send": "Send Message"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@use "../variables.scss" as *;
+@use "../screen" as *;
+
+input,
+textarea {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--color_text);
+  transition: all 0.3s linear;
+  &::placeholder {
+    color: var(--color_text);
+    text-transform: capitalize;
+    font-family: var(--font-family_1);
+  }
+  &:focus-visible {
+    outline: none;
+    border-bottom-width: 2px;
+    border-color: var(--color_2);
+    &::placeholder {
+      color: var(--color_title);
+      font-weight: 600;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.contact {
+  &-infos {
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px 20px 40px;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+    &-item {
+      display: grid;
+      grid-template-columns: 80px 70px auto;
+    }
+  }
+  &-input-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+      grid-template-columns: 1fr;
+    }
+  }
+}

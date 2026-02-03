@@ -1,0 +1,167 @@
+{
+  "home": {
+    "menu": {
+      "about": "Lý lịch",
+      "projects": "Dự án",
+      "skills": "Kỹ năng",
+      "contact": "Liên hệ"
+    },
+    "hero": {
+      "name": "Nguyễn Tình",
+      "buttons": {
+        "downloadCv": "Tải xuống CV",
+        "contactMe": "Liên hệ tôi"
+      }
+    },
+    "social": {
+      "facebook": "Facebook",
+      "github": "Github",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "toolbar": {
+    "language": {
+      "vi-text": "Tiếng Việt",
+      "en-text": "Tiếng Anh"
+    }
+  },
+  "about": {
+    "title": "Lý lịch của tôi",
+    "hello": "Chào bạn! Bạn đang tìm một developer về mảng website đúng không?",
+    "description": "Xin giới thiệu tôi tên là Tình, hiện đang sống tại Đà Nẵng. Tôi có kinh nghiệm phát triển và triển khai trên các nền tảng hosting của\"Amazon and Azure\", tôi thông thạo các Framework website nổi tiếng hiện nay như ReactJS, Typescript, Dotnet. Tôi có thể giúp bạn giải quyết vấn đề nhanh chóng nhất, hãy liên hệ cho tôi",
+    "info": {
+      "age": {
+        "label": "Tuổi",
+        "value": "25"
+      },
+      "residence": {
+        "label": "Vị trí",
+        "value": "Đà Nẵng"
+      },
+      "freelance": {
+        "label": "Trạng thái",
+        "value": "Available"
+      },
+      "address": {
+        "label": "Địa chỉ",
+        "value": "Sơn Trà, Đà Nẵng"
+      }
+    }
+  },
+  "services": {
+    "title": "Dịch vụ hiện tại",
+    "frontend": {
+      "title": "Front-end",
+      "content": "Hoàn thành dự án với đầy đủ tính năng cơ bản, tương thích cao với các màn hình thiết bị máy tính và điện thoại, đảm bảo code được duy trì tốt và có khả năng scallable cao"
+    },
+    "backend": {
+      "title": "Back-end",
+      "content": "Phát triển các tính năng giúp truy xuất dữ liệu từ database, đảm bảo các kiến trúc và nguyên tắc phát triển API. Áp dụng các tính năng bảo mật code phòng tránh các sự tấn công"
+    },
+    "mobile": {
+      "title": "Mobile",
+      "content": "Ứng dụng công nghệ React-native để phát triển các App, đảm bảo cho sản phẩm mang hiệu ứng nhanh mượt trên các nền tảng global"
+    },
+    "advertising": {
+      "title": "Quảng cáo",
+      "content": "Giúp cho sản phẩm được quảng bá đến cho người dùng bằng các ứng dụng các công cụ giúp tiếp cận khách hàng nhanh và nhiều hơn bằng các phương thức SEO, chiến dịch mạng xã hội, cũng như các công cụ tìm kiếm hiện nay"
+    }
+  },
+  "projects": {
+    "title": "Các dự án",
+    "all": "Tất cả",
+    "websites": "Trang web",
+    "campaigns": "Chiến dịch"
+  },
+  "resume": {
+    "title": "Hồ sơ",
+    "experience": {
+      "title": "Kinh nghiệm",
+      "items": [
+        {
+          "duration": "2022 - Hiện tại",
+          "company": "Công ty cổ phần công nghệ quốc tế Avepoint",
+          "role": "Team leader",
+          "description": "Phối hợp các cấp giao việc cũng như kiểm soát deadline cho phần coding giữa các thành viên"
+        },
+        {
+          "duration": "2019 - 2020",
+          "company": "Công ty tư nhân truyền thông và công nghệ Catmedia",
+          "role": "Junior Developer",
+          "description": "Hoàn thành theo yêu cầu dự án đúng thời gian và công nghệ thực thi"
+        },
+        {
+          "duration": "2018 - 2019",
+          "company": "FPT Company",
+          "role": "Thực tập sinh",
+          "description": "Học cách triển khai các bước thực hiện với công nghệ trong quy trình thực thi một ứng dụng website"
+        }
+      ]
+    },
+    "education": {
+      "title": "Giáo dục",
+      "items": [
+        {
+          "duration": "2018-2022 (Tốt nghiệp)",
+          "school": "Đại học liên thông FPT Greenwich Quốc tế",
+          "role": "Sinh viên ngành Kỹ sư phần mềm",
+          "description": "Học và hoàn thành bài tập theo các giáo án của trường"
+        },
+        {
+          "duration": "2020-2026",
+          "school": "Chứng chỉ Online",
+          "role": "Học viên của ngành An ninh mạng",
+          "description": "Khóa học được cấp chứng chỉ Online trên trang Udemy"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "title": "Kỹ năng",
+    "coding": {
+      "title": "Công nghệ",
+      "items": ["HTML/CSS", "Dotnet", "Javascript/Typescript", "ReactJS/VueJS"]
+    },
+    "knowledge": {
+      "title": "Kiến thức",
+      "items": [
+        "Website Hosting",
+        "Tối ưu hóa SEO",
+        "Responsive and mobile-ready",
+        "Chạy chiến dịch quảng cáo truyền thông mạng"
+      ]
+    },
+    "languages": {
+      "title": "Ngôn ngữ giao tiếp",
+      "items": ["Tiếng Việt", "Tiếng Anh"]
+    }
+  },
+  "contact": {
+    "title": "Thông tin liên hệ",
+    "info": {
+      "address": {
+        "label": "Địa chỉ",
+        "value": "Đà Nẵng"
+      },
+      "email": {
+        "label": "Email",
+        "value": "tinhnt1006@gmail.com"
+      },
+      "phone": {
+        "label": "Số điện thoại",
+        "value": "+84 398 866 140"
+      },
+      "freelance": {
+        "label": "Freelance",
+        "value": "Available"
+      }
+    },
+    "form": {
+      "title": "Form liên hệ",
+      "fullName": "Tên bạn / tên công ty",
+      "email": "Địa chỉ email liên hệ",
+      "message": "Nội dung muốn gửi",
+      "send": "Gửi cho tôi"
+    }
+  }
+}
